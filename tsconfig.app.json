@@ -25,7 +25,10 @@
     /* Alias */
     "paths": {
       "~/*": ["./src/*"]
-    }
+    },
+
+    /* Types */
+    "types": ["vitest/globals"]
   },
   "include": ["src"]
 }
