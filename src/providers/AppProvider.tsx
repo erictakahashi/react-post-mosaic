@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from 'react'
 import { BrowserRouter } from 'react-router'
 
 /**
@@ -9,3 +9,5 @@ export const AppProvider = (props: PropsWithChildren) => {
 
   return <BrowserRouter>{children}</BrowserRouter>
 }
+
+export default AppProvider
