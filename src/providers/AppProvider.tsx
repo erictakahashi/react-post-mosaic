@@ -1,13 +1,20 @@
+import { CssBaseline, ThemeProvider } from '@mui/material'
 import type { PropsWithChildren } from 'react'
 import { BrowserRouter } from 'react-router'
+import theme from '~/theme/theme'
 
 /**
  * A provider that provides other providers for the app.
  */
-export const AppProvider = (props: PropsWithChildren) => {
+const AppProvider = (props: PropsWithChildren) => {
   const { children } = props
 
-  return <BrowserRouter>{children}</BrowserRouter>
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <BrowserRouter>{children}</BrowserRouter>
+    </ThemeProvider>
+  )
 }
 
 export default AppProvider
