@@ -11,9 +11,11 @@ const Layout = (props: LayoutProps) => {
   const { children } = props
 
   return (
-    <div className="grid h-screen w-screen grid-rows-[auto_1fr]">
+    <div className="grid h-screen w-screen grid-rows-[auto_1fr] overflow-hidden">
       <Header />
-      <Container maxWidth="xl">{children}</Container>
+      <Container className="overflow-hidden" maxWidth="xl">
+        {children}
+      </Container>
     </div>
   )
 }
